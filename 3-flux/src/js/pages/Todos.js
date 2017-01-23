@@ -53,7 +53,11 @@ export default class Featured extends React.Component {
     return (
       <div class="container">
         <div class="text-center">
+<<<<<<< HEAD
           <h1>To Do List</h1>
+=======
+          <h1>Todos</h1>
+>>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
           <input type="text" class="form-control" style={{width: '20em', display: 'inline'}} ref={(input) => this.input = input} />&#160;
           <button class="btn btn-success glyphicon glyphicon-plus" aria-hidden="true" style={{display: 'inline'}}onClick={this.createTodo.bind(this)}></button>&#160;
           <button class="btn btn-medium btn-success glyphicon glyphicon-repeat" onClick={this.reloadTodos.bind(this)}></button>

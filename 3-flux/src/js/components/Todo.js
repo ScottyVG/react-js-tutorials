@@ -7,6 +7,7 @@ export default class Todo extends React.Component {
 
   render() {
     const { complete, edit, text } = this.props;
+<<<<<<< HEAD
     const listStyles = {
       fontSize: "16px",
       color: "#7e7e7e",
@@ -37,6 +38,13 @@ export default class Todo extends React.Component {
     const editIcon = <button style={editStyle} class="btn btn-small btn-info glyphicon glyphicon-pencil"></button>
     const completeIcon = complete ? <button style={completeStyle} class="btn btn-small btn-success glyphicon glyphicon-ok"></button> : <button style={completeStyle} class="text-right btn btn-small btn-warning glyphicon glyphicon-remove"></button>
     const deleteIcon = <button style={deleteStyle} class="btn btn-small btn-danger glyphicon glyphicon-trash"></button>
+=======
+    const liStyle= {
+      // fontSize: "18px",
+      // color: "rgb(12, 136, 205)"
+    }
+>>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
+
 
 
     if (edit) {
@@ -49,11 +57,17 @@ export default class Todo extends React.Component {
 
     return (
 
+<<<<<<< HEAD
       <li style={listStyles} class="list-group-item">
         <span>{editIcon}</span>
         <span style={listText}>&#160; {text}</span>
         <span>&#160;{completeIcon}</span>
         <span>&#160;{deleteIcon}</span>
+=======
+      <li style={liStyle} class="list-group-item">
+        <span>{text} </span>
+        <span>  {icon}</span>
+>>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
       </li>
     );
   }

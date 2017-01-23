@@ -9,11 +9,24 @@ export default class Layout extends React.Component {
     const { location } = this.props;
     const containerStyle = {
       marginTop: "60px",
+<<<<<<< HEAD
+=======
+    };
+
+    const bodyStyle = {
+      // backgroundColor: "rgb(243, 250, 216)",
+      // height: "700px",
+      // width: "auto"
+>>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
     };
 
     return (
 
+<<<<<<< HEAD
       <div class="body">
+=======
+      <div class="body" style={bodyStyle}>
+>>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
 
         <Nav location={location} />
 
