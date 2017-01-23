@@ -1,6 +1,5 @@
 import dispatcher from "../dispatcher";
 
-<<<<<<< HEAD
 export function createTodo(id) {
   dispatcher.dispatch({
     type: "CREATE_TODO",
@@ -19,12 +18,13 @@ export function editTodo(id) {
   dispatcher.dispatch({
     type: "EDIT_TODO",
     id,
-=======
+  });
+}
+
 export function createTodo(newTodo) {
   dispatcher.dispatch({
     type: "CREATE_TODO",
     newTodo,
->>>>>>> 364e7f5f42f4ad18d01c6e4ee15e1611508b7954
   });
 }
 
