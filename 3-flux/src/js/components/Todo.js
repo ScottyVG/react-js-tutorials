@@ -11,6 +11,18 @@ export default class Todo extends React.Component {
       fontSize: "16px",
       color: "#7e7e7e",
     }
+    const editStyle = {
+      position: "absolute",
+      left: "0px",
+      top: "2px",
+      border: "1px solid white",
+    }
+    const favStyle = {
+      position: "absolute",
+      left: "40px",
+      top: "2px",
+      border: "1px solid white",
+    }
     const completeStyle = {
       position: "absolute",
       right: "40px",
@@ -23,20 +35,15 @@ export default class Todo extends React.Component {
       top: "2px",
       border: "1px solid white",
     }
-    const editStyle = {
-      position: "absolute",
-      left: "0px",
-      top: "2px",
-      border: "1px solid white",
-    }
     const listText = {
       position: "absolute",
-      left: "40px",
+      left: "80px",
     }
 
-    const editIcon = <button style={editStyle} class="btn btn-small btn-info glyphicon glyphicon-pencil"></button>
-    const completeIcon = complete ? <button style={completeStyle} class="btn btn-small btn-success glyphicon glyphicon-ok"></button> : <button style={completeStyle} class="text-right btn btn-small btn-warning glyphicon glyphicon-remove"></button>
-    const deleteIcon = <button style={deleteStyle} class="btn btn-small btn-danger glyphicon glyphicon-trash"></button>
+    const editIcon = <button style={editStyle} class="btn btn-small btn-default glyphicon glyphicon-edit"></button>
+    const favIcon = <button style={favStyle} class="btn btn-small btn-default glyphicon glyphicon-star-empty"></button>
+    const completeIcon = complete ? <button style={completeStyle} class="btn btn-small btn-success glyphicon glyphicon-ok"></button> : <button style={completeStyle} class="text-right btn btn-small btn-default glyphicon glyphicon-ok-circle"></button>
+    const deleteIcon = <button style={deleteStyle} class="btn btn-small btn-default glyphicon glyphicon-trash"></button>
 
 
     if (edit) {
@@ -51,6 +58,7 @@ export default class Todo extends React.Component {
 
       <li style={listStyles} class="list-group-item">
         <span>{editIcon}</span>
+        <span>{favIcon}</span>
         <span style={listText}>&#160; {text}</span>
         <span>&#160;{completeIcon}</span>
         <span>&#160;{deleteIcon}</span>
