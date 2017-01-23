@@ -1,5 +1,8 @@
 import React from "react";
 
+// import * as TodoActions from "../actions/TodoActions";
+// import TodoStore from "../stores/TodoStore";
+
 export default class Todo extends React.Component {
   constructor(props) {
     super();
@@ -59,8 +62,8 @@ export default class Todo extends React.Component {
       <li style={listStyles} class="list-group-item">
         <span>{editIcon}</span>
         <span>{favIcon}</span>
-        <span style={listText}>&#160; {text}</span>
-        <span>&#160;{completeIcon}</span>
+        <span style={listText}>{text}</span>
+        <span>{completeIcon}</span>
         <span>&#160;{deleteIcon}</span>
       </li>
     );

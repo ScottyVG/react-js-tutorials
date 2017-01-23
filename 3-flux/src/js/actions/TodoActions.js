@@ -7,26 +7,33 @@ export function createTodo(id) {
   });
 }
 
-export function completeTodo(id) {
-  dispatcher.dispatch({
-    type: "COMPLETE_TODO",
-    id,
-  });
-}
-
-export function editTodo(id) {
-  dispatcher.dispatch({
-    type: "EDIT_TODO",
-    id,
-  });
-}
-
-export function deleteTodo(id) {
-  dispatcher.dispatch({
-    type: "DELETE_TODO",
-    id,
-  });
-}
+// export function completeTodo(id) {
+//   dispatcher.dispatch({
+//     type: "COMPLETE_TODO",
+//     id,
+//   });
+// }
+//
+// export function favoriteTodo(id) {
+//   dispatcher.dispatch({
+//     type: "COMPLETE_TODO",
+//     id,
+//   });
+// }
+//
+// export function editTodo(id) {
+//   dispatcher.dispatch({
+//     type: "EDIT_TODO",
+//     id,
+//   });
+// }
+//
+// export function deleteTodo(id) {
+//   dispatcher.dispatch({
+//     type: "DELETE_TODO",
+//     id,
+//   });
+// }
 
 export function reloadTodos() {
   // axios("http://someurl.com/somedataendpoint").then((data) => {
