@@ -32,7 +32,9 @@ export default class Featured extends React.Component {
     newTodo = {
       id: Date.now(),
       text: this.input.value,
-      complete: false
+      complete: false,
+      archive: false,
+      favorite: false
     }
     TodoActions.createTodo(newTodo);
     this.input.value = ''

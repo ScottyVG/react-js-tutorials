@@ -14,20 +14,12 @@ export function completeTodo(id) {
   });
 }
 
-// export function deleteTodo(id) {
-//   dispatcher.dispatch({
-//     type: "DELETE_TODO",
-//     id,
-//   });
-// }
-
-//
-// export function favoriteTodo(id) {
-//   dispatcher.dispatch({
-//     type: "COMPLETE_TODO",
-//     id,
-//   });
-// }
+export function favoriteTodo(id) {
+  dispatcher.dispatch({
+    type: "FAVORITE_TODO",
+    id
+  });
+}
 //
 // export function editTodo(id) {
 //   dispatcher.dispatch({
@@ -47,12 +39,16 @@ export function reloadTodos() {
       {
         id: 8484848484,
         text: "Go Shopping Again",
-        complete: false
+        complete: false,
+        archive: false,
+        favorite: false
       },
       {
         id: 6262627272,
         text: "Hug Wife",
-        complete: true
+        complete: true,
+        archive: false,
+        favorite: false
       },
     ]});
   }, 1000);

@@ -8,9 +8,18 @@ export default class Todo extends React.Component {
     super();
   }
 
-  updateCompleted(id) {
+  updateComplete(id) {
     TodoActions.completeTodo(id);
   }
+
+  updateFavorite(id) {
+    TodoActions.favoriteTodo(id);
+  }
+
+  // updateDelete(id) {
+  //   TodoActions.deleteTodo(id);
+  // }
+
 
   render() {
     const { complete, edit, text, id } = this.props;
@@ -48,8 +57,9 @@ export default class Todo extends React.Component {
     }
 
     const editIcon = <button style={editStyle} class="btn btn-small btn-default glyphicon glyphicon-edit"></button>
+    // const favIcon = <button style={favStyle} onClick={this.updateFavorite.bind(this, id)} class={"btn btn-small glyphicon " + (favorite ? "btn-warning glyphicon-star" : "btn-default glyphicon-star-empty")}></button>
     const favIcon = <button style={favStyle} class="btn btn-small btn-default glyphicon glyphicon-star-empty"></button>
-    const completeIcon = <button style={completeStyle} onClick={this.updateCompleted.bind(this, id)} class={"btn btn-small glyphicon " + (complete ? "btn-success glyphicon-ok" : "btn-default glyphicon-ok-circle")}></button>
+    const completeIcon = <button style={completeStyle} onClick={this.updateComplete.bind(this, id)} class={"btn btn-small glyphicon " + (complete ? "btn-success glyphicon-ok" : "btn-default glyphicon-ok-circle")}></button>
     const deleteIcon = <button style={deleteStyle} class="btn btn-small btn-default glyphicon glyphicon-trash"></button>
 
 
