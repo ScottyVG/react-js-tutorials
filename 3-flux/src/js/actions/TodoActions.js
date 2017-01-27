@@ -13,6 +13,14 @@ export function completeTodo(id) {
     id
   });
 }
+
+// export function deleteTodo(id) {
+//   dispatcher.dispatch({
+//     type: "DELETE_TODO",
+//     id,
+//   });
+// }
+
 //
 // export function favoriteTodo(id) {
 //   dispatcher.dispatch({
@@ -28,12 +36,6 @@ export function completeTodo(id) {
 //   });
 // }
 //
-// export function deleteTodo(id) {
-//   dispatcher.dispatch({
-//     type: "DELETE_TODO",
-//     id,
-//   });
-// }
 
 export function reloadTodos() {
   // axios("http://someurl.com/somedataendpoint").then((data) => {

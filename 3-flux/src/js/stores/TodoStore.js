@@ -58,6 +58,16 @@ class TodoStore extends EventEmitter {
     this.emit("change");
   }
 
+  // deleteTodo(id) {
+  //   this.todos.forEach(todo => {
+  //     if (todo.id === id) {
+  //       todo.complete = !todo.complete;
+  //     }
+  //
+  //   });
+  //   this.emit("change");
+  // }
+
   handleActions(action) {
     console.log("TodoStore received an action", action);
     switch(action.type) {
@@ -67,23 +77,23 @@ class TodoStore extends EventEmitter {
         break;
       }
       case "CREATE_TODO": {
-        this.createTodo(action.text);
+        this.createTodo(action.text.text);
         break;
       }
       case "COMPLETE_TODO": {
         this.completeTodo(action.id);
         break;
       }
+      // case "DELETE_TODO": {
+      //   this.deleteTodo(action.id);
+      //   break;
+      // }
       // case "FAVORITE_TODO": {
       //   this.favoriteTodo(action.id.text);
       //   break;
       // }
       // case "EDIT_TODO": {
       //   this.editTodo(action.id.text);
-      //   break;
-      // }
-      // case "DELETE_TODO": {
-      //   this.deleteTodo(action.id.text);
       //   break;
       // }
     }
