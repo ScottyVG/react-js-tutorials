@@ -1,18 +1,18 @@
 import dispatcher from "../dispatcher";
 
-export function createTodo(id) {
+export function createTodo(text) {
   dispatcher.dispatch({
     type: "CREATE_TODO",
-    id,
+    text
   });
 }
 
-// export function completeTodo(id) {
-//   dispatcher.dispatch({
-//     type: "COMPLETE_TODO",
-//     id,
-//   });
-// }
+export function completeTodo(id) {
+  dispatcher.dispatch({
+    type: "COMPLETE_TODO",
+    id
+  });
+}
 //
 // export function favoriteTodo(id) {
 //   dispatcher.dispatch({
